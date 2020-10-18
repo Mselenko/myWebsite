@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  color: black;
+}
+
+.nav-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  padding: 2%;
+}
+
+.navbar {
+  margin-right: auto;
+  
+}
+
+a:hover{
+  color: grey;
+}
+
+
+.navBottom{
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  width: 90%;
+  margin: auto;
+}
+
+.logo{
+  font-family: 'Alex Brush', cursive;
+  font-size: 2em;
+  border-bottom: solid 3px #019fb6; 
+}
+
+.position{
+  display: block;
+  font-size: 15px;
+}
+
+.navbar-nav{
+  list-style: none;
+}
+
+ .nav-item {
+    font-size: 0.8em;
+    display: inline-block;
+    padding: 0px 20px;
+ }
+
+
+
+.nav-item:after, .nav-item:before {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #019fb6;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+
+    
+  .nav-item:hover:after, .nav-item:hover:before { transform: scaleX(1);  }
+
+
+
+@media (max-width: 1201px) {
+  .nav-container {
+    flex-direction: column;
+
+    .navbar {
+      margin: 0;
+      width: 100%;
+    }
+    
+    .nav {
+      display: flex;
+      flex-direction: column;
+      height: 0;
+      transition: height 200ms linear;
+      overflow: hidden;
+      flex-wrap: nowrap;
+      text-align: center;
+
+      &.show {
+        height: 250px;
+        overflow: initial;
+
+        .nav-item {
+          opacity: 1;
+          visibility: visible
+        }
+      }
+
+      .nav-item {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 200ms linear, visibility 200ms linear;
+        transition-delay: var(--delay);
+        border-bottom: solid 1px #019fb6; 
+        margin: 10px;
+      }
+    }
+  }
+    
+}
