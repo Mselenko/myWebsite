@@ -16,4 +16,17 @@ export class AppComponent {
   public navbarButtonClick() {
     this.isNavbarShowing = !this.isNavbarShowing;
   }
+
+  ngOnInit() {
+    window.addEventListener('scroll', this.scroll, true); //third parameter
+}
+
+ngOnDestroy() {
+    window.removeEventListener('scroll', this.scroll, true);
+}
+
+scroll = (event): void => {
+  var header = document.querySelector(".nav-container");
+  header.classList.toggle("sticky", window.scrollY > 0)
+};
 }

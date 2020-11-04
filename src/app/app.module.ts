@@ -7,7 +7,8 @@ import { AboutComponent } from './about/about.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ContactsComponent } from './contacts/contacts.component'; // CLI imports router
+import { ContactsComponent } from './contacts/contacts.component';
+import { FooterComponent } from './footer/footer.component'; // CLI imports router
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
     AboutComponent,
     HomeComponent,
     ProjectsComponent,
-    ContactsComponent
+    ContactsComponent,
+    FooterComponent
   ], 
   imports: [
     BrowserModule,

@@ -1,0 +1,46 @@
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+ // height: 2.5rem;
+ border-top: 1px solid rgba(0,0,0,.5);
+  margin: auto;
+left: 0;
+right: 0;
+bottom: 0;
+
+.icons{
+  font-size: 30px;
+  color: #019fb6;
+}
+
+.icons:hover, .icons-1:hover{
+  cursor: pointer;
+  color:#04b1cc;
+}
+
+.icons-1{
+ font-size: 35px;
+ color: #019fb6;
+}
+
+
+
+.footer-copyright{
+  background-color: #e2e2e1;
+  
+}
+
+.col-6{
+  font-size: 32px;
+  color: #019fb6;
+  border-left: 1px solid rgba(0,0,0,.5);
+  .tel{
+    font-size: 18px;
+    color: black;
+    margin-left: 50px;
+    font-style: italic;
+
+  }
+}
+}
